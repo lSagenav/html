@@ -1,0 +1,79 @@
+.body {
+    background-color: rgb(242, 220, 223);
+}
+
+
+/* Barra superior */
+.init-bar {
+    background-color: pink;    /* cámbialo al color del Figma */
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;    /* título a la izquierda, nav a la derecha */
+    align-items: center;    /* centrado vertical */
+    padding: 0 40px;    /* espacio interno */
+    height: 80px;    /* altura fija como en el diseño */
+}
+
+
+.main{
+    display: grid;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;    /* color de texto */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: darkred;    /* efecto hover */
+}
+
+.h2 {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;    /* Puedes probar con 2rem, 2.5rem, 3rem según el tamaño que quieras */
+    color: #000;
+    font-weight: bold;
+}
+
+.section-1 {
+    display: flex;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    border-radius: 25px;
+    justify-content: flex-start;
+    padding: 40px;    /* Añade espacio interno */
+    margin: 20px;    /* Añade espacio externo */
+    align-items: center;    /* Centra verticalmente */
+}
+
+.intro-text {
+    background-color: pink;
+    padding: 40px;    /* Espacio interno cómodo */
+    min-height: 400px;    /* Altura mínima para que el cuadro se vea grande */
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;    /* Centra el texto verticalmente */
+}
+
+
+.div-final-inicial {
+    margin-right: 100px;
+}
+
+.section-2{
+    display: grid;
+    background-color: pink;
+
+}
