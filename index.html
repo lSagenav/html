@@ -1,76 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Codificación de caracteres -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julia Huang Portfolio</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Hace que el diseño sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Julia Huang Portfolio</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fuente desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="body">
-    <!-- Barra superior -->
-    <header>
+<body>
 
+    <!-- ================= HEADER ================= -->
+    <header>
+        <!-- Barra superior centrada -->
         <div class="init-bar">
+
+            <!-- Nombre / logo -->
             <h1>Julia Huang</h1>
+
+            <!-- Navegación principal -->
             <nav class="navbar">
                 <a href="#">Projects</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </nav>
+
         </div>
-
     </header>
-    <br>
 
-    <main class="main">
-        <!-- Sección principal -->
-        <section class="section-1">
-            <div class="intro-text">
-                <h2 class="h2">Artist Redefining Architecture with AI-Driven Design</h2>
+    <!-- ================= MAIN (GRID PRINCIPAL) ================= -->
+    <!-- dashboard es el contenedor GRID -->
+    <main class="dashboard">
+
+        <!-- ===== TEXTO GRANDE (ocupa 2 columnas) ===== -->
+        <!-- card = estilo base reutilizable -->
+        <section class="card intro-text">
+            <h2>
+                Artist Redefining <br>
+                Architecture with <strong>AI-Driven Design</strong>
+            </h2>
+        </section>
+
+        <!-- ===== FOTO (columna central) ===== -->
+        <section class="card portrait-card">
+            <img src="./img/Imagen_pegada.png" alt="Julia Huang portrait">
+        </section>
+
+        <!-- ===== MUSEA (columna derecha, 2 filas) ===== -->
+        <section class="card gallery">
+
+            <!-- Encabezado de la galería -->
+            <div class="gallery-header">
+                <h3>Musea</h3>
+                <span>↗</span>
             </div>
-            <img src="./img/Imagen_pegada.png" alt="Julia Huang portrait" />
 
-            <section class="section-2">
+            <!-- Imagen principal del proyecto -->
+            <img src="./img/Musea.png" alt="Musea artwork">
 
-                <div class="div-final-inicial">
-                    <section>
-                        <img src="./img/Musea.png" alt="Museo">
+            <!-- Lista de proyectos -->
+            <ul class="project-list">
+                <li>Elara</li>
+                <li>Verve</li>
+                <li>Zephyr</li>
+            </ul>
 
-                    </section>
-
-                </div>
-
-            </section>
         </section>
 
-
-        <section>
-            <p class="bio">
-                Julia Huang is an innovative AI artist renowned for blending cutting-edge technology with creative
-                expression. Based in LA, she crafts visionary experiences grounded globally.
+        <!-- ===== BIOGRAFÍA ===== -->
+        <section class="card bio">
+            <p>
+                Julia Huang is an innovative AI artist renowned for blending cutting-edge
+                technology with creative expression. Based in LA, she crafts unique
+                digital art experiences accessible globally.
             </p>
-            <!-- Galería de proyectos -->
-            <section class="gallery">
-                <h3>Museo</h3>
-                <img src="./img/Musea.png" alt="Museo artwork" class="gallery-img" />
-                <ul class="project-list">
-                    <li>Elara</li>
-                    <li>Verve</li>
-                    <li>Zephyr</li>
-                </ul>
-            </section>
         </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section class="card contact-box">
+            <p>Have some questions?</p>
+            <h2>Contact me</h2>
+        </section>
+
     </main>
-    <!-- Redes sociales -->
+
+    <!-- ================= FOOTER ================= -->
     <footer class="social-footer">
         <a href="#">INSTAGRAM</a>
         <a href="#">TWITTER</a>
         <a href="#">LINKEDIN</a>
     </footer>
-</body>
 
+</body>
 </html>

@@ -1,79 +1,206 @@
-.body {
-    background-color: rgb(242, 220, 223);
+/* =====================================================
+   RESET GLOBAL
+   ===================================================== */
+/* Elimina márgenes y paddings por defecto del navegador
+   y evita problemas de cálculo de tamaños */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
 }
 
+/* =====================================================
+   BODY
+   ===================================================== */
+/* Estilos generales de toda la página */
+body {
+    background-color: #f2dcdf; /* Color de fondo general */
+    font-family: 'Poppins', sans-serif; /* Fuente global */
+    color: #333; /* Color base del texto */
+}
 
-/* Barra superior */
+/* =====================================================
+   HEADER
+   ===================================================== */
+header {
+    padding: 20px; /* Separación del borde del navegador */
+}
+
+/* Barra superior (logo + navegación) */
 .init-bar {
-    background-color: pink;    /* cámbialo al color del Figma */
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;    /* título a la izquierda, nav a la derecha */
-    align-items: center;    /* centrado vertical */
-    padding: 0 40px;    /* espacio interno */
-    height: 80px;    /* altura fija como en el diseño */
+    background-color: #f8cdd0;
+    border-radius: 25px; /* Bordes redondeados */
+
+    max-width: 1200px; /* Limita el ancho */
+    margin: auto; /* Centra horizontalmente */
+
+    padding: 0 40px; /* Espacio interno lateral */
+    height: 80px;
+
+    display: flex; /* Flexbox para alinear contenido */
+    justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
+    align-items: center; /* Centrado vertical */
 }
 
-
-.main{
-    display: grid;
+/* Título principal */
+.init-bar h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
-
-/* Navbar */
+/* Navegación */
 .navbar {
-    display: flex;
-    gap: 30px;
+    display: flex; /* Links en fila */
+    gap: 30px; /* Espacio entre enlaces */
 }
 
+/* Enlaces del menú */
 .navbar a {
-    text-decoration: none;
-    color: #333;    /* color de texto */
+    text-decoration: none; /* Quita subrayado */
+    color: #333;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: darkred;    /* efecto hover */
+/* =====================================================
+   GRID PRINCIPAL (LAYOUT)
+   ===================================================== */
+/* Contenedor principal del contenido */
+.dashboard {
+    max-width: 1200px; /* Misma anchura que el header */
+    margin: 20px auto; /* Centrado + separación vertical */
+    padding: 20px;
+
+    display: grid; /* CSS Grid */
+    grid-template-columns: 2fr 1fr 1fr; /* 3 columnas (la primera es más ancha) */
+    grid-template-rows: auto auto; /* 2 filas automáticas */
+    gap: 20px; /* Espacio entre cards */
 }
 
-.h2 {
-    color: rgb(0, 0, 0);
-    font-size: 3rem;    /* Puedes probar con 2rem, 2.5rem, 3rem según el tamaño que quieras */
-    color: #000;
-    font-weight: bold;
-}
-
-.section-1 {
-    display: flex;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
+/* =====================================================
+   CARD BASE (REUTILIZABLE)
+   ===================================================== */
+/* Estilo base que comparten todas las secciones */
+.card {
+    background-color: #f8cdd0;
     border-radius: 25px;
-    justify-content: flex-start;
-    padding: 40px;    /* Añade espacio interno */
-    margin: 20px;    /* Añade espacio externo */
-    align-items: center;    /* Centra verticalmente */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave */
 }
 
+/* =====================================================
+   TEXTO PRINCIPAL (INTRO)
+   ===================================================== */
 .intro-text {
-    background-color: pink;
-    padding: 40px;    /* Espacio interno cómodo */
-    min-height: 400px;    /* Altura mínima para que el cuadro se vea grande */
+    grid-column: 1 / span 2; /* Ocupa 2 columnas */
+    grid-row: 1; /* Primera fila */
+
+    display: flex; /* Para centrar contenido */
+    align-items: center; /* Centrado vertical del texto */
+}
+
+/* Texto grande tipo "hero" */
+.intro-text h2 {
+    font-size: 2.6rem;
+    line-height: 1.2; /* Espacio entre líneas */
+}
+
+/* =====================================================
+   FOTO
+   ===================================================== */
+.portrait-card {
+    grid-column: 2; /* Columna central */
+    grid-row: 1; /* Primera fila */
+
+    padding: 0; /* Quita padding para que la imagen toque bordes */
+    overflow: hidden; /* Recorta la imagen */
+}
+
+/* Imagen de la foto */
+.portrait-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporción sin deformar */
     border-radius: 25px;
+}
+
+/* =====================================================
+   GALERÍA (MUSEA)
+   ===================================================== */
+.gallery {
+    grid-column: 3; /* Columna derecha */
+    grid-row: 1 / span 2; /* Ocupa dos filas */
+}
+
+/* Encabezado de la galería */
+.gallery-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;    /* Centra el texto verticalmente */
+    justify-content: space-between; /* Título a la izquierda, icono a la derecha */
+    align-items: center;
 }
 
-
-.div-final-inicial {
-    margin-right: 100px;
+/* Imagen principal del proyecto */
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0; /* Separación vertical */
 }
 
-.section-2{
-    display: grid;
-    background-color: pink;
+/* Lista de proyectos */
+.project-list {
+    list-style: none; /* Quita los puntos */
+}
 
+/* Cada item de la lista */
+.project-list li {
+    padding: 12px 0;
+    border-top: 1px solid rgba(0,0,0,0.15); /* Línea separadora */
+}
+
+/* =====================================================
+   BIOGRAFÍA
+   ===================================================== */
+.bio {
+    grid-column: 1; /* Primera columna */
+    grid-row: 2; /* Segunda fila */
+
+    font-size: 0.95rem;
+    line-height: 1.6; /* Texto cómodo de leer */
+}
+
+/* =====================================================
+   CONTACTO
+   ===================================================== */
+.contact-box {
+    grid-column: 2; /* Columna central */
+    grid-row: 2; /* Segunda fila */
+
+    background-color: #f7b1aa; /* Color distinto para destacar */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    justify-content: space-between; /* Espacio entre texto y título */
+}
+
+/* Título del contacto */
+.contact-box h2 {
+    font-size: 2rem;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.social-footer {
+    background-color: #f8cdd0;
+    margin: 20px auto; /* Centrado */
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Links del footer */
+.social-footer a {
+    margin: 0 15px; /* Separación horizontal */
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
 }
