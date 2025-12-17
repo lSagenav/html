@@ -1,82 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Codificación de caracteres -->
     <meta charset="UTF-8" />
-
-    <!-- Hace que el diseño sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Julia Huang Portfolio</title>
-
-    <!-- CSS principal -->
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Fuente desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
     <header>
-        <!-- Barra superior centrada -->
         <div class="init-bar">
-
-            <!-- Nombre / logo -->
             <h1>Julia Huang</h1>
-
-            <!-- Navegación principal -->
             <nav class="navbar">
                 <a href="#">Projects</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </nav>
-
         </div>
     </header>
 
-    <!-- ================= MAIN (GRID PRINCIPAL) ================= -->
-    <!-- dashboard es el contenedor GRID -->
     <main class="dashboard">
 
-        <!-- ===== TEXTO GRANDE (ocupa 2 columnas) ===== -->
-        <!-- card = estilo base reutilizable -->
         <section class="card intro-text">
+            <img src="./img/figura.png" alt="logo">
             <h2>
-                Artist Redefining <br>
-                Architecture with <strong>AI-Driven Design</strong>
+                Artist Redefining Architecture with AI-Driven Design
             </h2>
         </section>
 
-        <!-- ===== FOTO (columna central) ===== -->
         <section class="card portrait-card">
             <img src="./img/Imagen_pegada.png" alt="Julia Huang portrait">
         </section>
 
-        <!-- ===== MUSEA (columna derecha, 2 filas) ===== -->
         <section class="card gallery">
-
-            <!-- Encabezado de la galería -->
             <div class="gallery-header">
                 <h3>Musea</h3>
                 <span>↗</span>
             </div>
-
-            <!-- Imagen principal del proyecto -->
             <img src="./img/Musea.png" alt="Musea artwork">
-
-            <!-- Lista de proyectos -->
             <ul class="project-list">
                 <li>Elara</li>
                 <li>Verve</li>
                 <li>Zephyr</li>
             </ul>
-
         </section>
 
-        <!-- ===== BIOGRAFÍA ===== -->
         <section class="card bio">
+            <img src="./img/icono_pink.png" alt="logo">
             <p>
                 Julia Huang is an innovative AI artist renowned for blending cutting-edge
                 technology with creative expression. Based in LA, she crafts unique
@@ -84,20 +57,18 @@
             </p>
         </section>
 
-        <!-- ===== CONTACTO ===== -->
         <section class="card contact-box">
             <p>Have some questions?</p>
             <h2>Contact me</h2>
         </section>
 
-    </main>
+        <section class="card social-footer">
+            <a href="#">INSTAGRAM</a>
+            <a href="#">TWITTER</a>
+            <a href="#">LINKEDIN</a>
+        </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="social-footer">
-        <a href="#">INSTAGRAM</a>
-        <a href="#">TWITTER</a>
-        <a href="#">LINKEDIN</a>
-    </footer>
+    </main>
 
 </body>
 </html>
