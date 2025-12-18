@@ -1,74 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> <!-- Declaración del tipo de documento y lenguaje -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julia Huang Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptación responsive -->
+    <title>Julia Huang</title> <!-- Título de la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Vinculación con el archivo CSS -->
 </head>
-
 <body>
 
-    <header>
-        <div class="init-bar">
-            <h1>Julia Huang</h1>
-            <nav class="navbar">
-                <a href="#">Projects</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
+    <!-- NAVBAR / ENCABEZADO PRINCIPAL -->
+    <header class="headerprin">
+        <h1>JULIA HUANG</h1> <!-- Nombre principal -->
+
+        <nav class="links"> <!-- Menú de navegación -->
+            <a href="#">PROJECTS</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>
     </header>
 
-    <main class="dashboard">
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="todoelcontenidoo">    
+        <main>
 
-        <section class="card intro-text">
-            <img src="./img/figura.png" alt="logo">
-            <h2>
-                Artist Redefining Architecture with AI-Driven Design
-            </h2>
-        </section>
+            <!-- PRIMERA TARJETA (Título + Icono) -->
+            <article class="articulo1">
+                <img src="assets/FLOWER ICON.png" alt="icon"> <!-- Icono decorativo -->
+                <h1>
+                    Artist Redefining <br>
+                    Architecture with <br>
+                    AI-Driven Design
+                </h1>
+            </article>
 
-        <section class="card portrait-card">
-            <img src="./img/Imagen_pegada.png" alt="Julia Huang portrait">
-        </section>
-
-        <section class="card gallery">
-            <div class="gallery-header">
-                <h3>Musea</h3>
-                <span>↗</span>
+            <!-- Imagen principal destacada -->
+            <div class="imageninde">
+                <img src="assets/IMAGE.png" alt="Main image" class="main-img">
             </div>
-            <img src="./img/Musea.png" alt="Musea artwork">
-            <ul class="project-list">
-                <li>Elara</li>
-                <li>Verve</li>
-                <li>Zephyr</li>
-            </ul>
-        </section>
 
-        <section class="card bio">
-            <img src="./img/icono_pink.png" alt="logo">
-            <p>
-                Julia Huang is an innovative AI artist renowned for blending cutting-edge
-                technology with creative expression. Based in LA, she crafts unique
-                digital art experiences accessible globally.
-            </p>
-        </section>
+            <!-- SEGUNDA TARJETA (Biografía) -->
+            <article class="articulo2"> 
+                <img src="assets/CIRCLE ICON.png" alt="icon" class="icon">
+                <p>
+                    Julia Huang is an innovative AI <br> artist, renowned for blending <br>
+                    cutting-edge technology with <br> creative expression. Based in <br> LA,
+                    she crafts unique digital art <br> experiences accessible globally.
+                </p>
+            </article>
 
-        <section class="card contact-box">
-            <p>Have some questions?</p>
-            <h2>Contact me</h2>
-        </section>
+            <!-- TERCERA TARJETA (Contacto) -->
+            <article class="articulo3">
+                <header class="headerar3">
+                    <p>Have some <br> questions?</p>
+                    <img src="assets/ARROW.png" alt="Imagen">
+                </header>
+                <h2>Contact me</h2>
+            </article>
 
-        <section class="card social-footer">
-            <a href="#">INSTAGRAM</a>
-            <a href="#">TWITTER</a>
-            <a href="#">LINKEDIN</a>
-        </section>
+        </main>
 
-    </main>
+        <!-- COLUMNA DERECHA -->
+        <div class="columna_derecha">
 
+            <!-- TARJETA DE PROYECTOS -->
+            <article class="articulo4">
+                <header class="headerar4">
+                    <h2>Musea</h2>
+                    <img src="assets/ARROW.png" alt="imagen">
+                </header>
+
+                <!-- Imagen dentro de la tarjeta -->
+                <div class="imagennube">
+                    <img src="assets/lilcoderman_pink_chair_sitting_on_table_in_a_room_in_the_style__8f5e5aa9-38f8-4af0-89f3-8572b0ae9362 1.png" alt="imagen">
+                </div>
+
+                <!-- Lista de proyectos -->
+                <section>
+                    <hr>
+                    <h3>Elara</h3>
+                    <hr>
+                    <h3>Verve</h3>
+                    <hr>
+                    <h3>Zephyr</h3>
+                </section>
+            </article>
+
+            <!-- FOOTER / REDES SOCIALES -->
+            <footer>
+                <nav>
+                    <a href="">INSTAGRAM</a>
+                    <a href="">TWITTER</a>
+                    <a href="">LINKEDIN</a>
+                </nav>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
